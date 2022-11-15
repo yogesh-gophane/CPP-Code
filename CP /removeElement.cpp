@@ -34,5 +34,6 @@ int main()
     int result = removeElement(nums, val);
 
     cout << result;
+    cout<<'Hello';
     return 0;
 }
