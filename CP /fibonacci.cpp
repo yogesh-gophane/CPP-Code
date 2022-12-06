@@ -2,11 +2,14 @@
 
 using namespace std;
 int arr[5] = {0};
-int fib(int n)
+int tribonacci(int n)
 {
     if (n == 1 || n == 0)
     {
         return n;
+    }
+    if (n==2){
+        return 1;
     }
     if (arr[n] != 0)
     {
@@ -14,12 +17,12 @@ int fib(int n)
     }
     else
     {
-        return arr[n] = fib(n - 1) + fib(n - 2);
+        return arr[n] = tribonacci(n-1) + tribonacci(n - 2) + tribonacci(n-3);
     }
 }
 
 int main()
 {
-    cout << fib(4);
+    cout << tribonacci(4);
     return 0;
 }
